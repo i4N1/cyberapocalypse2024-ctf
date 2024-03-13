@@ -1,0 +1,9 @@
+import requests
+
+url = "http://94.237.60.112:42136/api/v1/chat/"
+ticket = "eyJhbGciOiJQUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTAzMzEzMTgsImlhdCI6MTcxMDMyNzcxOCwianRpIjoiVnRDeHYyYTRzTVRGakxjTHRscU1JdyIsIm5iZiI6MTcxMDMyNzcxOCwicm9sZSI6Imd1ZXN0IiwidXNlciI6Imd1ZXN0X3VzZXIifQ.e3epXAvmyIEOtS3wiZud5l5CEbvRfXdUzZVNOJl_YtP-rvbbcCFoir3XYUNOxCJ5Ycve16rvHdHNcWv3CEvhVnsvn4UiTiE867GNatuWlhn4kSIlyaf4Z4kGkKpQjaqZOPaMYmW6Fbh24aUYBgYFtgful5bDyHUiYBkNBr_vLnQohV9hEs4yFXypLJ9Y0OeikyOUG0KlzA0CbBpM4PjTsPj_g-aKR6Bkguzew0b14M4woasOBTRrNtGZRj-JC9syw278N2_qjRc3vlA_obKjClYwfyz7XqKqk9-ZGWs8VpfWPJfHQCrIeM3GhLxdjFJetuuYQ8f_06xjufLp3n2J_w"
+HEADERS= {
+    'Authorization': ticket
+}
+r = requests.get(f'{url}1', headers=HEADERS)
+print(r.text)
